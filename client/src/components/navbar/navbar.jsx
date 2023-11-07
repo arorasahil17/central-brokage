@@ -156,7 +156,7 @@ export default function Nav() {
               </Link>
             ) : (
               <button
-                className="px-6 py-2 disabled:dark:bg-white/90 dark:text-black disabled:bg-black/80 text-white rounded-lg text-sm bg-black"
+                className="px-6 py-2 disabled:dark:bg-yellow-500 dark:text-black disabled:bg-black/80 text-white rounded-lg text-sm bg-black"
                 disabled
               >
                 Sign in
