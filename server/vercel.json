@@ -1,0 +1,111 @@
+{
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/find-loads",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/login",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/sign",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/verify-otp",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/profile",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/reset-password",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/new-password",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/my-bookings",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/change-password",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/manage/loads",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/manage/user",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/manage/users",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/manage/bookings",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/sign",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/customize",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/customize/hero",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/customize/services",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/admin/customize/contact",
+      "dest": "dist/index.html"
+    },
+
+    {
+      "src": "/server-error",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "dist/$1"
+    }
+  ]
+}
