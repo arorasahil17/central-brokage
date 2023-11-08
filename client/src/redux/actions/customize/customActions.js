@@ -89,16 +89,10 @@ export const getContact = (navigate) => async (dispatch) => {
     const response = await axios.get("/api/get-contact");
 
     if (response.data.status) {
-      console.log("contact", response);
       const phone = response.data.contact.phone;
-      console.log("phone", phone);
       const startNumber = phone.slice(0, 3);
-      console.log(startNumber);
       const endNumber = phone.slice(3, phone.length);
-
       const mainNumber = `(${startNumber})${endNumber}`;
-      console.log(mainNumber);
-
       const details = {
         address: response.data.contact.address,
         email: response.data.contact.email,

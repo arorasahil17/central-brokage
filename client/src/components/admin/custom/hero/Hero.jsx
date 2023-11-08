@@ -123,7 +123,7 @@ const Hero = () => {
                     <div className="mt-2">
                       <button
                         onClick={uploadImage}
-                        className="w-full bg-gray-100 px-4 py-2 rounded"
+                        className="w-full bg-gray-100 px-4 py-2 rounded text-black"
                         type="button"
                       >
                         Upload Image

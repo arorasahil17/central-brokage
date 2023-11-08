@@ -36,8 +36,13 @@ const Contact = () => {
 
   useEffect(() => {
     setAddress(details.address);
-    setNumber(details.phone);
     setEmail(details.email);
+    const ogNumber = details.phone;
+    console.log(ogNumber);
+    const initialDigits = ogNumber.slice(1, 4);
+    const lastDigits = ogNumber.slice(5, ogNumber.length);
+    const correctNumber = `${initialDigits}${lastDigits}`;
+    setNumber(correctNumber);
     setId(details._id);
   }, [details]);
 
@@ -101,7 +106,7 @@ const Contact = () => {
                     </label>
                     <div className="mt-2">
                       <input
-                        type="number"
+                        type="text"
                         className="w-full text-sm px-4 py-2 text-primary/70 bg-transparent dark:text-white/70 dark:placeholder:text-white/60 rounded-lg mt-2 focus:border-neutral-500 dark:focus:border-white/50 focus:outline-none border-1 border-zinc-300 dark:border-neutral-800 inputfile"
                         cols="30"
                         rows="5"

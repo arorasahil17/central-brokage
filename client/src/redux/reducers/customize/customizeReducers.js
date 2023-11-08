@@ -5,6 +5,7 @@ import {
   GET_CONTACT_FAILURE,
   GET_CONTACT_REQUEST,
   GET_CONTACT_SUCCESS,
+  GET_HERO_FAILURE,
   GET_HERO_REQUEST,
   GET_HERO_SUCCESS,
   GET_SERVICES_FAILURE,
@@ -58,6 +59,8 @@ const heroReducer = (state = initialStateHero, action) => {
       return { ...state, isLoading: true };
     case GET_HERO_SUCCESS:
       return { ...state, isLoading: false, details: action.payload.data };
+    case GET_HERO_FAILURE:
+      return { ...state, isLoading: false };
     case CLEAR_HERO_MESSAGE:
       return { ...state, isLoading: false, success: "", error: "" };
     default:

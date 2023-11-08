@@ -151,12 +151,15 @@ export default function Nav() {
         ) : (
           <NavbarItem>
             {!isServerError ? (
-              <Link to="/login" className="px-6 py-2 rounded-lg text-sm ">
+              <Link
+                to="/login"
+                className="px-6 py-2 rounded-lg text-sm bg-primary text-white dark:text-black dark:bg-white"
+              >
                 Sign In
               </Link>
             ) : (
               <button
-                className="px-6 py-2 disabled:dark:bg-yellow-500 dark:text-black disabled:bg-black/80 text-white rounded-lg text-sm bg-black"
+                className="px-6 py-2 disabled:dark:bg-white/80 dark:text-black disabled:bg-black/80 text-white rounded-lg text-sm bg-black"
                 disabled
               >
                 Sign in

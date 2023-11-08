@@ -7,6 +7,7 @@ import {
   getService,
   updateService,
 } from "../../../../redux/actions/customize/customActions";
+import { useNavigate } from "react-router";
 
 const Services = () => {
   const cloudinaryRef = useRef();
@@ -15,6 +16,7 @@ const Services = () => {
   const isLoading = useSelector((state) => state.service.isLoading);
   const success = useSelector((state) => state.service.success);
   const error = useSelector((state) => state.service.success);
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [serviceImg, setServiceImg] = useState(null);
@@ -43,7 +45,7 @@ const Services = () => {
   }, [success, error, dispatch]);
 
   useEffect(() => {
-    dispatch(getService());
+    dispatch(getService(navigate));
   }, [dispatch]);
 
   const handleSubmit = (e) => {
@@ -132,7 +134,7 @@ const Services = () => {
                     <div className="mt-2">
                       <button
                         onClick={uploadImage}
-                        className="w-full bg-gray-100 px-4 py-2 rounded"
+                        className="w-full bg-gray-100 px-4 py-2 rounded text-black"
                         type="button"
                       >
                         Upload Image

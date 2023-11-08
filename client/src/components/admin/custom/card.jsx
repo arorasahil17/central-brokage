@@ -5,7 +5,7 @@ export default function Card({ svg, title, linkTitle, link }) {
   return (
     <>
       <div className="lg:w-96 md:w-[90%] sm:w-[90%] max-sm:w-[99%] p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-        <div className="bg-gray-100 p-2 rounded w-12 flex justify-center">
+        <div className="bg-gray-100 p-2 rounded w-12 flex justify-center text-black">
           {svg}
         </div>
 
