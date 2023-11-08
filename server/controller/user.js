@@ -310,7 +310,9 @@ const resetPassword = asyncHandler(async (req, res, next) => {
   }
   const user = await Users.findOne({ resetPasswordToken: token });
   if (!user) {
-    const error = new Error("Invalid Link");
+    const error = new Error(
+      "Unable to find the user right now. Please try again after sometimes"
+    );
     error.statusCode = 400;
     next(error);
   }
