@@ -68,7 +68,6 @@ const updateBid = asyncHandler(async (req, res, next) => {
   const { bidStatus } = req.body;
   const bid = await Bids.findById(bidId);
   bid.bidStatus = bidStatus;
-  console.log(bid);
   const loadId = bid.loadId;
   const userId = bid.userId;
   const load = await Loads.findById(loadId);

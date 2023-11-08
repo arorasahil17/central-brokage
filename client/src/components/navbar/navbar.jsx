@@ -16,7 +16,7 @@ import {
 } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import Toggle from "./swicth/switch.jsx";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../redux/actions/users/userActions.js";
 
@@ -25,6 +25,7 @@ export default function Nav() {
   const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
   const location = useLocation();
+  const navigate = useNavigate();
   const isServerError = location.pathname === "/server-error";
 
   const menuItems = [
@@ -139,7 +140,7 @@ export default function Nav() {
                   className="text-black/70 dark:text-white/70"
                 >
                   <button
-                    onClick={() => dispatch(logoutUser())}
+                    onClick={() => dispatch(logoutUser(navigate))}
                     className="text-danger-400 font-semibold"
                   >
                     Log Out

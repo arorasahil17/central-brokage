@@ -6,7 +6,7 @@ import { Toaster, toast } from "sonner";
 
 const ChangePasswordAdmin = () => {
   const [password, setPassword] = useState("");
-  const token = useParams();
+  const { token } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoading = useSelector((state) => state.admin.isLoading);

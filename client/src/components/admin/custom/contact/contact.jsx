@@ -38,7 +38,6 @@ const Contact = () => {
     setAddress(details.address);
     setEmail(details.email);
     const ogNumber = details.phone;
-    console.log(ogNumber);
     const initialDigits = ogNumber.slice(1, 4);
     const lastDigits = ogNumber.slice(5, ogNumber.length);
     const correctNumber = `${initialDigits}${lastDigits}`;

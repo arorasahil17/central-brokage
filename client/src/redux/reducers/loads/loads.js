@@ -38,7 +38,6 @@ const loadsReducer = (state = initialStateLoads, action) => {
         isLoading: false,
       };
     case GET_LOADS_FALURE:
-      console.log(action.payload);
       return {
         ...state,
         isLoading: false,

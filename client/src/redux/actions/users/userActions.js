@@ -52,7 +52,6 @@ export const fetchUsers = () => async (dispatch) => {
   try {
     const response = await axios.get("/api/users");
     if (response.data.status) {
-      console.log("fetch");
       dispatch({ type: FETCH_USERS_SUCCESS, payload: response.data.users });
     }
   } catch (err) {
@@ -151,7 +150,7 @@ export const loginFailure = (error) => ({
 
 export const updateUserRequest = (id, status) => async (dispatch) => {
   dispatch({ type: UPDATE_USER_PROCESSING });
-  console.log(status);
+
   try {
     const response = await axios.patch(`/api/update-user-request/${id}`, {
       status,
@@ -164,12 +163,10 @@ export const updateUserRequest = (id, status) => async (dispatch) => {
 };
 
 export const setUserId = (user) => (dispatch) => {
-  console.log(user);
   dispatch({ type: SET_USERID, payload: user._id });
 };
 
 export const updateUserProfile = (data) => async (dispatch) => {
-  console.log("updated data", data);
   try {
     const response = await axios.put("/api/update-profile", data);
 
@@ -267,13 +264,13 @@ export const newPasswordAC = (token, newPassword) => async (dispatch) => {
   }
 };
 
-export const logoutUser = () => async (dispatch) => {
-  console.log("logout");
+export const logoutUser = (navigate) => async (dispatch) => {
   dispatch({ type: LOGOUT_USER_REQUEST });
   try {
     const res = await axios.post("/api/logout");
     if (res.data.status) {
       dispatch({ type: LOGOUT_USER_SUCCESS });
+      navigate("/");
     }
   } catch (error) {
     dispatch({

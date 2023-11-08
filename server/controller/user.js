@@ -228,16 +228,13 @@ const updateUserRequest = asyncHandler(async (req, res, next) => {
 
 const updateProfile = asyncHandler(async (req, res, next) => {
   const { name, email, contactNumber } = req.body;
-  console.log("body", req.body);
   const id = req.userId;
-  console.log(id);
   let updatedUser = await Users.findByIdAndUpdate(
     id,
     { $set: { name, email, contactNumber } },
     { runValidator: true },
     { new: true }
   );
-  console.log(updatedUser);
   if (!updatedUser) {
     const error = new Error(
       "Something went wroong! Maybe you are not logged in"

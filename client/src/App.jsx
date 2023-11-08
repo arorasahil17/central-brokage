@@ -18,7 +18,7 @@ function App() {
   const success = useSelector((state) => state.user.success);
   const error = useSelector((state) => state.user.error);
   const isLoading = useSelector((state) => state.hero.isLoading);
-  console.log(isLoading);
+
   useEffect(() => {
     document.title = "Central Brokage";
     dispatch(checkAuth());

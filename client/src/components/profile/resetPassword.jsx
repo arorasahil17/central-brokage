@@ -15,14 +15,12 @@ export default function ResetPassword() {
 
   useEffect(() => {
     if (isLoading) {
-      console.log("loading...");
       toast.loading("Please wait...");
-      console.log("loading...");
       dispatch(clearUserMessage());
     }
     if (success) {
       toast.success(success);
-      console.log("success", success);
+
       dispatch(clearUserMessage());
     }
   }, [success, isLoading, dispatch]);

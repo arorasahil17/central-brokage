@@ -60,7 +60,6 @@ export const adminRegister = (formData, navigate) => async (dispatch) => {
       navigate("/admin/sign");
     }
   } catch (error) {
-    console.log(error);
     dispatch({
       type: ADMIN_REGISTER_ERROR,
       payload: error.response.data.message,
@@ -97,7 +96,6 @@ export const changePasswordAdmin =
         navigate("/admin/sign");
       }
     } catch (error) {
-      console.log(error);
       dispatch({
         type: CHANGE_PASSWORD_ADMIN_ERR,
         payload: error.response.data.message,

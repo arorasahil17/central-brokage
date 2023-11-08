@@ -15,7 +15,6 @@ const ResetPasswordAdmin = ({ handleActiveTab }) => {
   const success = useSelector((state) => state.admin.success);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(`success ${success}`);
   useEffect(() => {
     if (isLoading) {
       toast.loading("Please wait...");
