@@ -23,8 +23,8 @@ const ServerError = () => {
           500 - Server error
         </h1>
         <p className="text-slate-600 mt-5 lg:text-lg dark:text-white/70">
-          Oops something went wrong. Try to refresh this page or <br /> feel
-          free to contact us if the problem presists.
+          Oops something went wrong. Feel free to contact us if the problem
+          presists.
         </p>
       </div>
     </div>
