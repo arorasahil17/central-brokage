@@ -309,6 +309,11 @@ const resetPassword = asyncHandler(async (req, res, next) => {
     next(error);
   }
   const user = await Users.findOne({ resetPasswordToken: token });
+  if (!user) {
+    const error = new Error("Invalid Link");
+    error.statusCode = 400;
+    next(error);
+  }
   const hashedPassword = await bcrypt.hash(newPassword, 10);
   user.password = hashedPassword;
   user.resetPasswordToken = null;
