@@ -7,7 +7,6 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { checkAuth, clearUserMessage } from "./redux/actions/users/userActions";
 import { toast } from "sonner";
-
 axios.defaults.baseURL = "http://api.centralbrokerage.net";
 axios.defaults.withCredentials = true;
 
