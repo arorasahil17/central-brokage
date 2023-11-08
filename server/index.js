@@ -31,7 +31,7 @@ server.use(
   cors({
     credentials: true,
     origin: [
-      "http://centralbrokerage.net",
+      "https://centralbrokerage.net",
       "http://178.16.142.45",
       "http://localhost:5173",
     ],
