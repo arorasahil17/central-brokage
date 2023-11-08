@@ -20,7 +20,6 @@ function App() {
   const isLoading = useSelector((state) => state.hero.isLoading);
 
   useEffect(() => {
-    document.title = "Central Brokage";
     dispatch(checkAuth());
     if (success) {
       toast.success(success);
