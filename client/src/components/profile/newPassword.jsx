@@ -12,7 +12,7 @@ export default function NewPassword() {
   const isLoading = useSelector((state) => state.user.isLoading);
   const success = useSelector((state) => state.user.success);
   const error = useSelector((state) => state.user.error);
-  const token = useParams();
+  const { token } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     if (success) {
