@@ -60,7 +60,7 @@ const store = configureStore({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <NextUIProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="https://centralbrokerage.com">
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
