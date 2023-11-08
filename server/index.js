@@ -27,18 +27,17 @@ async function connectDb() {
 }
 
 connectDb();
-// server.use(
-//   cors({
-//     credentials: true,
-//     origin: [
-//       "http://localhost:4173",
-//       "http://localhost:5173",
-//       "http://centralbrokerage.net",
-//       "http://178.16.142.45/",
-//     ],
-//   })
-// );
-server.use(cors());
+server.use(
+  cors({
+    credentials: true,
+    origin: [
+      "http://localhost:4173",
+      "http://localhost:5173",
+      "http://centralbrokerage.net",
+      "http://178.16.142.45/",
+    ],
+  })
+);
 server.use(express.json());
 server.use(cookieParser());
 server.use("/api", userRouter);
@@ -56,12 +55,12 @@ const __dirname = path.dirname(__filename);
 
 server.use(express.static(path.resolve(__dirname, "dist")));
 
-server.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
 // server.get("/", (req, res) => {
-//   res.json({ message: "Hello World" });
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
 // });
+
+server.get("/", (req, res) => {
+  res.json({ message: "Hello World" });
+});
 
 server.listen(port, () => console.log(`Server is running on ${port}`));
