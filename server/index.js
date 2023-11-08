@@ -30,12 +30,7 @@ connectDb();
 server.use(
   cors({
     credentials: true,
-    origin: [
-      "http://localhost:4173",
-      "http://localhost:5173",
-      "http://centralbrokerage.net",
-      "http://178.16.142.45/",
-    ],
+    origin: "http://centralbrokerage.net",
   })
 );
 server.use(express.json());
