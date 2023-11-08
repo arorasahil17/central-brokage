@@ -33,7 +33,8 @@ server.use(
     origin: [
       "http://localhost:4173",
       "http://localhost:5173",
-      "https://centralbrokerage.net",
+      "http://centralbrokerage.net",
+      "http://178.16.142.45/",
     ],
   })
 );
