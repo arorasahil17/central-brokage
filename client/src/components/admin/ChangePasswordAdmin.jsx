@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { changePasswordAdmin } from "../../redux/actions/admin/admin";
 import { Toaster, toast } from "sonner";
 
 const ChangePasswordAdmin = () => {
   const [password, setPassword] = useState("");
-  const [searchParams] = useSearchParams();
-  const token = searchParams.get("token");
+  const token = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoading = useSelector((state) => state.admin.isLoading);

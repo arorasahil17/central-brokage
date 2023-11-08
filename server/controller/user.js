@@ -289,7 +289,7 @@ const forgetPassword = asyncHandler(async (req, res, next) => {
     from: process.env.EMAIL_USER,
     to: email,
     subject: "Reset Password Token",
-    html: `To Reset the password click on the link below. This link is valid for 10 minutes.\n<a href='https://centralbrokerage.net/new-password?token=${randomToken}'>Click Here</a>`,
+    html: `To Reset the password click on the link below. This link is valid for 10 minutes.\n<a href='https://centralbrokerage.net/new-password/${randomToken}'>Click Here</a>`,
   };
   await transporter.sendMail(mailOptions);
   await user.save();

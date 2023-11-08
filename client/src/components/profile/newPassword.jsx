@@ -2,24 +2,28 @@ import { useDispatch, useSelector } from "react-redux";
 import Loader from "../LOADER/loader";
 import { useEffect, useState } from "react";
 import { toast, Toaster } from "sonner";
-import { useSearchParams } from "react-router-dom";
-import { newPasswordAC } from "../../redux/actions/users/userActions";
+import { useParams } from "react-router-dom";
+import {
+  clearUserMessage,
+  newPasswordAC,
+} from "../../redux/actions/users/userActions";
 export default function NewPassword() {
   const [password, setPassword] = useState("");
   const isLoading = useSelector((state) => state.user.isLoading);
   const success = useSelector((state) => state.user.success);
   const error = useSelector((state) => state.user.error);
-  const [searchParams] = useSearchParams();
-  const token = searchParams.get("token");
+  const token = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     if (success) {
       toast.success(success);
+      dispatch(clearUserMessage());
     }
     if (error) {
       toast.error(error);
+      dispatch(clearUserMessage());
     }
-  }, [success, error]);
+  }, [success, error, dispatch]);
   const handleNewPassword = () => {
     dispatch(newPasswordAC(token, password));
   };

@@ -70,7 +70,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="verify-otp" element={<Otp />} />
             <Route path="profile" element={<Profile />} />
             <Route path="reset-password" element={<ResetPassword />} />
-            <Route path="new-password" element={<NewPassword />} />
+            <Route path="new-password/:token" element={<NewPassword />} />
             <Route path="my-bookings" element={<MyBookings />} />
             <Route path="change-password" element={<ChangePassword />} />
             <Route path="*" element={<Page404 />} />
@@ -94,7 +94,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="customize/contact" element={<Contact />} />
             <Route path="reset-password" element={<ResetPasswordAdmin />} />
           </Route>
-          <Route path="password-change" element={<ChangePasswordAdmin />} />
+          <Route
+            path="password-change/:token"
+            element={<ChangePasswordAdmin />}
+          />
         </Routes>
       </BrowserRouter>
     </NextUIProvider>

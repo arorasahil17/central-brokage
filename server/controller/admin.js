@@ -83,7 +83,7 @@ const adminPasswordReset = asyncHandler(async (req, res, next) => {
     from: process.env.EMAIL_USER,
     to: admin.email,
     subject: "Reset Password",
-    html: `To Reset the password click on the link below. This link is valid for 10 minutes.\n<a href='https://centralbrokerage.net/password-change?token=${resetToken}'>Click Here</a>`,
+    html: `To Reset the password click on the link below. This link is valid for 10 minutes.\n<a href='https://centralbrokerage.net/password-change/${resetToken}'>Click Here</a>`,
   };
   await transporter.sendMail(mailOptions);
   res.status(200).json({
