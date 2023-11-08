@@ -32,6 +32,7 @@ server.use(
     credentials: true,
     origin: [
       "https://centralbrokerage.net",
+      "https://www.centralbrokerage.net",
       "http://178.16.142.45",
       "http://localhost:5173",
     ],
