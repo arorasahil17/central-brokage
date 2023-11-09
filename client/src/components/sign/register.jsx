@@ -51,10 +51,7 @@ export default function Register() {
       toast.error("Please enter a valid 10 digit phone number");
       return;
     }
-    if (!/^[0]?[6789]\d{9}$/.test(formData.contactNumber)) {
-      toast.error("Contact number should start with 0 or 6 to 9");
-      return;
-    }
+
     if (!formData.password) {
       toast.error("Password is required!");
       return;

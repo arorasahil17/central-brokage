@@ -272,9 +272,15 @@ const changePassword = asyncHandler(async (req, res, next) => {
 
 const forgetPassword = asyncHandler(async (req, res, next) => {
   const { email } = req.body;
+  if (!email) {
+    const error = new Error("Please enter your email to get reset link!");
+    error.statusCode = 400;
+    next(error);
+    return;
+  }
   const user = await Users.findOne({ email });
   if (!user) {
-    const error = new Error("Something Went Wrong");
+    const error = new Error("No user found with email");
     error.statusCode = 500;
     return next(error);
   }

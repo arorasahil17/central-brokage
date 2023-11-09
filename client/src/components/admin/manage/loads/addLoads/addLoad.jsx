@@ -63,22 +63,13 @@ export default function AddLoad() {
     if (!formData.price) {
       toast.error("Price Field can't be empty");
       return;
-    } else if (isNaN(formData.price)) {
-      toast.error("Price Must Be A Number");
-      return;
     }
     if (!formData.weight) {
       toast.error("Weight field can't Be Empty");
       return;
-    } else if (isNaN(formData.weight)) {
-      toast.error("Weight Must Be A Number");
-      return;
     }
     if (!formData.eqLength) {
       toast.error("Equipment Length can't Be Empty");
-      return;
-    } else if (isNaN(formData.eqLength)) {
-      toast.error("Equipment length Must Be A Number");
       return;
     }
     if (!formData.equipment) {
@@ -338,27 +329,9 @@ export default function AddLoad() {
                   />
                 </div>
               </div>
-              {/* <div className="sm:col-span-2">
-                <label className="block text-sm font-semibold leading-6 text-gray-800">
-                  Equipment Commodity
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    className="block w-full rounded-md border-0 bg-white outline-none px-3.5 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1.5 focus:ring-inset focus:ring-gray-900 sm:text-sm sm:leading-6"
-                    value={formData.equipmentRequirement}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        equipmentRequirement: e.target.value,
-                      })
-                    }
-                  />
-                </div>
-              </div> */}
               <div className="sm:col-span-2">
                 <label className="block text-sm font-semibold leading-6 text-gray-800">
-                  Equipment Commodity
+                  Commodity
                 </label>
                 <div className="mt-2.5">
                   <select

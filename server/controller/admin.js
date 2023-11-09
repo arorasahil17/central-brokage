@@ -34,6 +34,10 @@ const adminSign = asyncHandler(async (req, res, next) => {
 
 const adminLogin = asyncHandler(async (req, res, next) => {
   const { username, password } = req.body;
+  if (!username || !password) {
+    const error = new Error("Please enter username and password");
+    return next(error);
+  }
   const admin = await Admin.findOne({ username });
   if (!admin) {
     const error = new Error("No existing admin found with this username");
