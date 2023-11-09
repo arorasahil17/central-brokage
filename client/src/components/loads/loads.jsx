@@ -640,7 +640,7 @@ export default function App({ loads, columns }) {
                       Miles
                     </h3>
                     <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                      {selectedLoad.totalMiles} LBS
+                      {selectedLoad.totalMiles} lbs
                     </p>
                   </li>
                   <li className="mb-6 ml-4">
