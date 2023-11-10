@@ -23,7 +23,7 @@ export default function LoadsPage() {
     { name: "Equipment", uid: "equipment" },
     { name: "Eq. Length", uid: "eqLength", sortable: true },
     { name: "Full Load", uid: "loadType" },
-    { name: "Requirement", uid: "equipmentRequirement" },
+    { name: "Equipment Requirement", uid: "equipmentRequirement" },
     { name: "Booking Status", uid: "isBooked" },
     { name: "Details", uid: "actions" },
   ];
