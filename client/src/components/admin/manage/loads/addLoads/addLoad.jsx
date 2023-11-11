@@ -301,13 +301,13 @@ export default function AddLoad() {
               </div>
               <div className="sm:col-span-2">
                 <label className="block text-sm font-semibold leading-6 text-gray-800">
-                  Equipment
+                  Commodity
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
                     className="block w-full rounded-md border-0 bg-white outline-none px-3.5 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1.5 focus:ring-inset focus:ring-gray-900 sm:text-sm sm:leading-6"
-                    value={formData.equipment}
+                    value={formData.equipmentRequirement}
                     onChange={(e) =>
                       setFormData({ ...formData, equipment: e.target.value })
                     }
@@ -331,11 +331,11 @@ export default function AddLoad() {
               </div>
               <div className="sm:col-span-2">
                 <label className="block text-sm font-semibold leading-6 text-gray-800">
-                  Commodity
+                  Equipment
                 </label>
                 <div className="mt-2.5">
                   <select
-                    value={formData.equipmentRequirement}
+                    value={formData.equipment}
                     className="w-full text-black py-2.5 px-2 bg-white ring-1 ring-gray-300 rounded ring-inset"
                     onChange={(e) => {
                       setFormData({

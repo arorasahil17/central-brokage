@@ -153,12 +153,12 @@ export default function Register() {
             </div>
 
             <div className="text-right mt-2">
-              <a
-                href="#"
+              <Link
+                to="/reset-password"
                 className="text-sm font-semibold text-black/60 hover:text-black transition-all dark:text-white/60 dark:hover:text-white"
               >
                 Forgot Password?
-              </a>
+              </Link>
             </div>
             <button
               type="submit"
