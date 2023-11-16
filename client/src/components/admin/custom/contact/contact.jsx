@@ -35,16 +35,16 @@ const Contact = () => {
   }, [success, error, dispatch]);
 
   useEffect(() => {
-    setAddress(details.address);
-    setEmail(details.email);
-    const ogNumber = details.phone;
-    console.log(details);
-    const initialDigits = ogNumber.slice(1, 4);
-    console.log(initialDigits);
-    const lastDigits = ogNumber.slice(5, ogNumber.length);
-    const correctNumber = `${initialDigits}${lastDigits}`;
-    setNumber(correctNumber);
-    setId(details._id);
+    setTimeout(() => {
+      setAddress(details.address);
+      setEmail(details.email);
+      const ogNumber = details.phone;
+      const initialDigits = ogNumber.slice(1, 4);
+      const lastDigits = ogNumber.slice(5, ogNumber.length);
+      const correctNumber = `${initialDigits}${lastDigits}`;
+      setNumber(correctNumber);
+      setId(details._id);
+    }, 100);
   }, [details]);
 
   const handleSubmit = (e) => {

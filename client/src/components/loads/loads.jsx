@@ -630,7 +630,7 @@ export default function App({ loads, columns }) {
                       Weight
                     </h3>
                     <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                      {selectedLoad.weight}
+                      {selectedLoad.weight}lbs
                     </p>
                   </li>
                   <li className="mb-6 ml-4">
@@ -640,7 +640,7 @@ export default function App({ loads, columns }) {
                       Miles
                     </h3>
                     <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                      {selectedLoad.totalMiles} lbs
+                      {selectedLoad.totalMiles}
                     </p>
                   </li>
                   <li className="mb-6 ml-4">

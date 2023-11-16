@@ -87,7 +87,7 @@ export const getContact = (navigate) => async (dispatch) => {
   dispatch({ type: GET_CONTACT_REQUEST });
   try {
     const response = await axios.get("/api/get-contact");
-    console.log(response);
+    // console.log(response);
     if (response.data.status) {
       const phone = response.data.contact.phone;
       const startNumber = phone.slice(0, 3);

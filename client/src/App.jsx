@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { checkAuth, clearUserMessage } from "./redux/actions/users/userActions";
 import { toast } from "sonner";
 axios.defaults.baseURL = "https://api.centralbrokerage.net";
+// axios.defaults.baseURL = "http://localhost:3000/";
 axios.defaults.withCredentials = true;
 
 function App() {
