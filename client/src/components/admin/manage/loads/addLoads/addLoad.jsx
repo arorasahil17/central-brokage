@@ -338,12 +338,12 @@ export default function AddLoad() {
                 </label>
                 <div className="mt-2.5">
                   <select
-                    value={formData.equipmentRequirement}
+                    value={formData.equipment}
                     className="w-full text-black py-2.5 px-2 bg-white ring-1 ring-gray-300 rounded ring-inset"
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        equipmentRequirement: e.target.value,
+                        equipment: e.target.value,
                       });
                     }}
                   >
