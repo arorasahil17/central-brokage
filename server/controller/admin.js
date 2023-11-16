@@ -63,7 +63,7 @@ const adminLogin = asyncHandler(async (req, res, next) => {
     .json({ status: true, message: "Login Successfull", admin: admin });
 });
 
-const adminAuthenticate = asyncHandler(async (req, res, nex) => {
+const adminAuthenticate = asyncHandler(async (req, res, next) => {
   const id = req.adminId;
   const admin = await Admin.findById(id);
   res.status(200).json({ status: true, admin });
