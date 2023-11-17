@@ -12,10 +12,10 @@ const Features = ({ details }) => {
                 src={details.imageUrl}
               />
               <div className="text-center lg:w-2/3 w-full">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-slate-700 dark:text-white">
+                <h1 className="title-font sm:text-2xl lg:text-4xl max-sm:text-2xl mb-4 font-extrabold text-slate-700 dark:text-white">
                   {details.title}
                 </h1>
-                <p className="mb-8 leading-relaxed text-black/70 dark:text-white/60">
+                <p className="mb-8 leading-relaxed text-black/70 dark:text-white/60 max-sm:text-sm">
                   {details.description}
                 </p>
               </div>
