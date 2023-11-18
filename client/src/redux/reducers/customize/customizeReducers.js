@@ -90,7 +90,7 @@ const serviceReducer = (state = initialStateServices, action) => {
       return {
         ...state,
         isLoading: false,
-        error: "Failed to update, plase try after sometimes",
+        error: "Failed to update, Plase try after sometimes",
       };
     default:
       return state;
@@ -113,7 +113,7 @@ const contactReducer = (state = initialStateContact, action) => {
       return {
         ...state,
         isLoading: false,
-        error: "Failed to update, plase try after sometimes",
+        error: "Failed to update, Plase try after sometimes",
       };
     case CLEAR_CONTACT_MESSAGE:
       return { ...state, success: "", error: "" };

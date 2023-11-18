@@ -97,6 +97,7 @@ export const getContact = (navigate) => async (dispatch) => {
         address: response.data.contact.address,
         email: response.data.contact.email,
         phone: mainNumber,
+        _id: response.data.contact._id,
       };
       dispatch({ type: GET_CONTACT_SUCCESS, payload: details });
     }
