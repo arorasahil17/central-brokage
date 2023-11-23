@@ -10,7 +10,7 @@ import {
   getService,
 } from "../redux/actions/customize/customActions";
 import { useNavigate } from "react-router";
-import HeroImg from "./hero";
+// import HeroImg from "./hero";
 
 export default function Home() {
   const isLoading = useSelector((state) => state.hero.isLoading);
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <HeroImg />
+          {/* <HeroImg /> */}
           <Hero details={details} />
           <Features details={serviceDetails} />
           <Contact details={contactDetails} />
